@@ -1,14 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro');
-@import url('https://fonts.googleapis.com/css2?family=Piedra&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Ubuntu&display=swap');
 
 
 body {
-    font-family:'Source Code Pro', monospace;
+    background-color: rgb(168, 162, 201);
+    color:rgb(12,0,12);
+    font-family:'Ubuntu', sans-serif;
     font-size: larger;
     font-weight: 600;
 }
 h1 {
-    font-family: 'Piedra', cursive;
+    font-family: 'Indie Flower', cursive;
 }
 
 .col-4 {

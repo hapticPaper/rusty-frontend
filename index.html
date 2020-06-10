@@ -14,24 +14,26 @@
     <body>
         <div class="container-fluid">
             <div class="row">
-                <div class="col-4">
-                    <h1>Exciting Dashboard</h1>
+                <div class="col-4" style="vertical-align: auto; text-align: center;">
+                    <h1>Static Site Dashboard</h1>
                 </div>
-
-                <div class="col-4" >
-                    <select id="dataSelect" onchange="updateData()">
+            </div>
+            <div class="row">
+                <div class="col-1" ></div>
+                    <div class="col-4" >
+                    <select id="chartSelect" onchange="updateData()">
                     </select>
                 </div>
                 <div class="col-4" >
-                    <select id="chartSelect" onchange="updateData()">
+                    <select id="dataSelect" onchange="updateData()">
                     </select>
                 </div>
             </div>
             <div class="row">
                 <div class="col-1"></div>
-                <div class="col-3" id="onlydiv"></div>
-                <div class="col-1"></div>
                 <div class="col-6" id="secondDiv"></div>
+                <div class="col-1"></div>
+                <div class="col-3" id="onlydiv"></div>
                 <div class="col-1"></div>
             </div>
         </div>

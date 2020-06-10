@@ -10,8 +10,8 @@ function updateData(){
     fetch(`https://rusty-api.herokuapp.com/${endpoint}`).then(data=>data.json()).then(d=>{
         console.log(d);
         chartData=d.dataSetResults;
-        d.dataSetResults.forEach(n=>{
-            htmlList.push(`<b>Number:</b>${n}`);
+        d.dataSetResults.forEach((n, i)=>{
+            htmlList.push(`<b>${i+1}).   </b><i>${n}</i>`);
             colors.push(`rgb(${255 * Math.random()},${255 * Math.random()},${255 * Math.random()})`)
     });
     var chart = new Chart(ctx, {
