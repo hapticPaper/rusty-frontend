@@ -2,7 +2,8 @@
 function updateData(){
     endpoint = $('#dataSelect').val()
     chartType = $('#chartSelect').val()
-    points = $('#lengthInput').val()
+    points = $('#pointsSlider').val()
+    $('#pointsDiv').text(points)
     document.getElementById('dataTableBody').innerHTML=""
     htmlList = []
     chartData = []

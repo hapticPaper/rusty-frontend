@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <title>Static Site</title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
@@ -29,11 +30,18 @@
                     <select id="dataSelect" onchange="updateData()">
                     </select>
                 </div>
-                <div class="col-2" style="text-align: right;">Data Points: </div>
+                <div class="col-2">
+                    <span style="float: left;"><div>Data Points:</div></span>
+                    <span style="float: left;"><div id="pointsDiv">20</div></span><br>
+                    <div class="slidecontainer">
+                        <input type="range" min="5" max="50" value="20" class="slider" id="pointsSlider" onchange="updateData()">
+                      </div>
+                </div>
+                <!-- <div class="col-2" style="text-align: right;">Data Points: </div>
                 <div class="col-1">
                     <input type="text" id="lengthInput" class="form-control" placeholder="10" aria-label="Data Length" aria-describedby="basic-addon2" onchange="updateData()">                
 
-                </div>
+                </div> -->
             </div>
             <div class="row">
                 <div class="col-1"></div>
