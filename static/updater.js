@@ -2,13 +2,14 @@
 function updateData(){
     endpoint = $('#dataSelect').val()
     chartType = $('#chartSelect').val()
+    points = $('#lengthInput').val()
     document.getElementById('dataTableBody').innerHTML=""
     htmlList = []
     chartData = []
     colors = []
     cnvs = document.createElement("canvas")
     ctx = cnvs.getContext('2d')
-    fetch(`https://rusty-api.herokuapp.com/${endpoint}`).then(data=>data.json()).then(d=>{
+    fetch(`https://rusty-api.herokuapp.com/${endpoint}?length=${points}`).then(data=>data.json()).then(d=>{
         console.log(d);
         chartData=d.dataSetResults;
         d.dataSetResults.forEach((n, i)=>{
