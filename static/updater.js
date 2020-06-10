@@ -2,6 +2,7 @@
 function updateData(){
     endpoint = $('#dataSelect').val()
     chartType = $('#chartSelect').val()
+    document.getElementById('dataTableBody').innerHTML=""
     htmlList = []
     chartData = []
     colors = []
@@ -11,7 +12,15 @@ function updateData(){
         console.log(d);
         chartData=d.dataSetResults;
         d.dataSetResults.forEach((n, i)=>{
-            htmlList.push(`<b>${i+1}).   </b><i>${n}</i>`);
+            tr = document.createElement("tr")
+            td1 = document.createElement("td")
+            td2 = document.createElement("td")
+            td1.innerHTML = `<b>${i+1}</b>`
+            td2.innerHTML = `<b>${n}</b>`            
+
+            tr.appendChild(td1)
+            tr.appendChild(td2)
+            document.getElementById('dataTableBody').appendChild(tr);
             colors.push(`rgb(${255 * Math.random()},${255 * Math.random()},${255 * Math.random()})`)
     });
     var chart = new Chart(ctx, {
@@ -33,7 +42,6 @@ function updateData(){
         // Configuration options go here
         options: {}
     });
-    document.getElementById('onlydiv').innerHTML=htmlList.join("<br>");
     document.getElementById('secondDiv').innerHTML=""
     document.getElementById('secondDiv').appendChild(cnvs);
 })
