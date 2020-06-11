@@ -23,7 +23,8 @@ function updateData(){
             tr.appendChild(td1)
             tr.appendChild(td2)
             document.getElementById('dataTableBody').appendChild(tr);
-            colors.push(`rgb(${255 * Math.random()},${255 * Math.random()},${255 * Math.random()})`)
+            colors.push(`rgb(${255 * Math.random()},${10 * Math.random()},${100 * Math.random()})`)
+
     });
     var chart = new Chart(ctx, {
         // The type of chart we want to create
