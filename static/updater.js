@@ -23,7 +23,7 @@ function updateData(){
             tr.appendChild(td1)
             tr.appendChild(td2)
             document.getElementById('dataTableBody').appendChild(tr);
-            colors.push(`rgb(${255 * Math.random()},${10 * Math.random()},${100 * Math.random()})`)
+            colors.push(`rgb(${255 * Math.random()},${150 * Math.random()},${7 * Math.random()})`)
 
     });
     var chart = new Chart(ctx, {
