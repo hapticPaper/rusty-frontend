@@ -1,6 +1,6 @@
 function dataEndpoints() {
-    fetch('https://rusty-api.herokuapp.com/endpoints').then(data=>data.json()).then(d=>{
-    d.endpoints.forEach(n=>{
+    fetch('https://rusty-api.herokuapp.com/datasets').then(data=>data.json()).then(d=>{
+    d.datasets.forEach(n=>{
         o = document.createElement("option")
         o.text = n
         document.getElementById('dataSelect').add(o)
