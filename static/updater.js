@@ -37,6 +37,7 @@ function updateData(){
     endpoint = $('#dataSelect').val()
     chartType = $('#chartSelect').val()
     points = $('#pointsSlider').val()
+    document.getElementById('pointsDiv').innerHTML=points
     formula = $('#formulaInput').val()
     htmlList = []
     chartData = []
