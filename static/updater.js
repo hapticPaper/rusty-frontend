@@ -2,10 +2,19 @@
 function render(data){
     console.log(data)
     chartData=data.dataSetResults;
-    data.dataSetResults.forEach(n=>{
-            htmlList.push(`<b>Number:</b>${n}`);
-            colors.push(`rgb(${100 * Math.random()},${10 * Math.random()},${255 * Math.random()})`)
-    });
+    data.dataSetResults.forEach((n, i)=>{
+        tr = document.createElement("tr")
+        td1 = document.createElement("td")
+        td2 = document.createElement("td")
+        td1.innerHTML = `<b>${i+1}</b>`
+        td2.innerHTML = `<b>${n}</b>`            
+
+        tr.appendChild(td1)
+        tr.appendChild(td2)
+        document.getElementById('dataTableBody').appendChild(tr);
+        colors.push(`rgb(${255 * Math.random()},${10 * Math.random()},${100 * Math.random()})`)
+
+});
     
     var chart = new Chart(ctx, {
         // The type of chart we want to create
@@ -26,7 +35,6 @@ function render(data){
         // Configuration options go here
         options: {}
     });
-    document.getElementById('onlydiv').innerHTML=htmlList.join("<br>");
     document.getElementById('secondDiv').innerHTML=""
     document.getElementById('secondDiv').appendChild(cnvs);
 }
