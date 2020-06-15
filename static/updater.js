@@ -1,5 +1,7 @@
 
 function render(data){
+
+    document.getElementById('dataTableBody').innerHTML=""
     console.log(data)
     chartData=data.dataSetResults;
     data.dataSetResults.forEach((n, i)=>{
